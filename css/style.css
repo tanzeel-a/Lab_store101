@@ -1,0 +1,375 @@
+/* ============================================ */
+/* GOOGLE FONTS IMPORT                          */
+/* ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ============================================ */
+/* GLOBAL RESET & VARIABLES                     */
+/* ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-bg-color: black;
+    /* Main theme color for header/footer */
+    --accent-color: #4CAF50;
+    /* Green accent color */
+    --pink-bg: #fff0f5;
+    /* Slight pink background */
+}
+
+/* ============================================ */
+/* BODY STYLING                                 */
+/* ============================================ */
+body {
+    background-color: var(--pink-bg);
+}
+
+/* ============================================ */
+/* HEADER & NAVIGATION                          */
+/* ============================================ */
+header {
+    background-color: var(--main-bg-color);
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Menu */
+nav ul {
+    height: 12vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 0 1.5vw;
+    display: inline;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Saira", 'Franklin Gothic Medium', 'Arial Narrow';
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #729873;
+    /* Light green on hover */
+    font-size: larger;
+    font-weight: bold;
+}
+
+/* ============================================ */
+/* SEARCH BAR STYLING                           */
+/* ============================================ */
+.searchbar {
+    display: flex;
+    align-items: center;
+    margin-inline-end: 10vh;
+    margin-left: auto;
+}
+
+.searchbar input {
+    padding: 8px 15px;
+    border: 2px solid var(--accent-color);
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-family: "Saira", sans-serif;
+}
+
+/* Search Button */
+.btn {
+    display: inline-block;
+    font-family: "Saira", 'Franklin Gothic Medium', 'Arial Narrow';
+    padding: 8px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: 2px solid var(--accent-color);
+    border-radius: 0 20px 20px 0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    /* Darker green on hover */
+    border-color: #45a049;
+}
+
+/* ============================================ */
+/* MAIN CONTAINER                               */
+/* ============================================ */
+.container {
+    min-height: calc(100vh - 12vh - 12vh);
+    padding-bottom: 20px;
+}
+
+/* ============================================ */
+/* IMAGE SLIDER                                 */
+/* Automatic circular slider for banner images */
+/* ============================================ */
+.slider {
+    width: 90vw;
+    margin: 5px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+/* Slider Images */
+.img1 {
+    width: 100%;
+    height: 60vh;
+    object-fit: contain;
+    /* Maintain aspect ratio */
+    flex-shrink: 0;
+}
+
+/* ============================================ */
+/* PRODUCT CARDS STYLING                        */
+/* ============================================ */
+
+/* Product Card Images */
+.img2 {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+/* Text formatting within cards */
+.linesformat {
+    font-family: "Saira", 'Franklin Gothic Medium', 'Arial Narrow';
+    font-size: 14px;
+}
+
+/* Category Headings (Black background, Green text) */
+.my-2 {
+    font-family: "Saira", 'Franklin Gothic Medium', 'Arial Narrow';
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: black;
+    color: var(--accent-color);
+    /* Green text */
+    margin: 20px auto;
+    width: 90vw;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Small margin utility */
+.my-1 {
+    margin: 2px;
+}
+
+/* Card Pack Container (Horizontal Scroll) */
+.carditemspack {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    width: 90vw;
+    margin: 0 auto;
+    /* Hiding scrollbar for cleaner look */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.carditemspack::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+/* Individual Product Card */
+.carditems {
+    width: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+    margin: 0 10px;
+    border-radius: 8px;
+}
+
+.carditems:hover {
+    transform: scale(1.05);
+    /* Slight zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Info Container */
+.lines {
+    width: 100%;
+    text-align: center;
+}
+
+/* General text styling in product cards */
+.lines p {
+    background-color: #e8f5e9;
+    /* Light green background */
+    padding: 2px 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.lines p:hover {
+    background-color: #c8e6c9;
+    /* Darker green on hover */
+}
+
+/* Product Name (1st child) */
+.lines p:nth-child(1) {
+    font-weight: bold;
+}
+
+/* Discount Text (2nd child) - Red for emphasis */
+.lines p:nth-child(2) {
+    color: red;
+    font-weight: bold;
+}
+
+/* Buy Now Button (3rd child) */
+.lines p:nth-child(3) {
+    background-color: var(--accent-color);
+    /* Green button */
+    color: white;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.lines p:nth-child(3):hover {
+    background-color: #45a049;
+    /* Darker green on hover */
+    transform: scale(1.05);
+}
+
+/* ============================================ */
+/* FOOTER STYLING                               */
+/* Multi-column footer with links and address  */
+/* ============================================ */
+footer {
+    background-color: var(--main-bg-color);
+    color: white;
+    font-family: "Saira", 'Franklin Gothic Medium', 'Arial Narrow';
+    padding-top: 40px;
+    font-size: 12px;
+}
+
+.footer-container {
+    width: 100%;
+    background-color: #172337;
+    /* Darker background */
+}
+
+/* Footer Content Area */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 5vw;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #454d5e;
+}
+
+/* Footer Column */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    min-width: 150px;
+}
+
+.footer-column h3 {
+    color: #878787;
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+    display: block;
+    /* Override nav styling */
+    padding: 0;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Address Column */
+.address-column {
+    border-left: 1px solid #454d5e;
+    padding-left: 20px;
+}
+
+.address-section {
+    margin-bottom: 15px;
+}
+
+.address-section p {
+    margin: 2px 0;
+    font-size: 12px;
+}
+
+/* Footer Bottom (Copyright) */
+.footer-bottom {
+    padding: 25px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ============================================ */
+/* UTILITY CLASSES                              */
+/* ============================================ */
+.flex-all-centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
