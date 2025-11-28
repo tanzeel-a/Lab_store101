@@ -152,8 +152,8 @@ nav ul li a:hover {
 
 /* Product Card Images */
 .img2 {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
     /* Maintain aspect ratio */
     margin-bottom: 10px;
